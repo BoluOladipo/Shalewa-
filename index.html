@@ -19,12 +19,13 @@
         /* When envelope is open, allow vertical scrolling on body */
 body.envelope-open {
     overflow-y: auto;
+    height: auto;   /* remove 100vh limit */
 }
 
         .container {
             position: relative;
             width: 320px;
-            height: 220px;
+            height: auto;
             perspective: 1000px;
         }
 
@@ -107,6 +108,7 @@ body.envelope-open {
             position: absolute;
             width: 90%;
             height: 80%;
+            max-height: 80vh; /* use max-height instead of fixed height */
             background: white;
             border-radius: 8px;
             padding: 20px;
